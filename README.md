@@ -38,12 +38,12 @@ NSString* chosenVariant = [rolloutManagerInstance variantByExperimentId:@"experi
 The structure of the configuration dictionary that is consumed by the Rollout Manager consists of sub-dictionaries:
 
 1. The experiment level, here we define the experiment ids (experiment names)
-2. The experiment options:
-  1. Settings, at this moment the Rollout Manager supports three options:
-    * is_sticky - receives a YES\NO option.
-    * supported_countries - receives a string of country codes separated by a comma (https://en.wikipedia.org/wiki/ISO_3166-1)
-    * supported_languages - receives a string of languages separated by a comma  (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
-  2. Variants, a dictionary of the variants names and their weights.
+1. The experiment options:
+   1. Settings, at this moment the Rollout Manager supports three options:
+      1. is_sticky - receives a YES\NO option.
+      1. supported_countries - receives a string of country codes separated by a comma (https://en.wikipedia.org/wiki/ISO_3166-1)
+      1. supported_languages - receives a string of languages separated by a comma  (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+   1. Variants, a dictionary of the variants names and their weights.
 
 **How does the Rollout Manager calculate it weights?**
 
