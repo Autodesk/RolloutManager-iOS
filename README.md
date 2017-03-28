@@ -1,7 +1,7 @@
 # Rollout Manager
-RolloutManager is a component intended to help you roll out your features inside your app by defining variants and allocating odds for each of them.
+RolloutManager is a component intended to help you roll out your features inside your app by defining variants and setting odds for each of them.
 
-The component includes many features like stickiness and default values for your convenience.
+The component includes many features like stickiness and default values management for your convenience.
 
 #### Support
 - Built for iOS 8
@@ -37,7 +37,7 @@ NSString* chosenVariant = [rolloutManagerInstance variantByExperimentId:@"experi
 #### Configuration Dictionary Structure
 The structure of the configuration dictionary that is consumed by the Rollout Manager consists of sub-dictionaries:
 
-1. The experiment level, here we define the experiment ids (experiment names)
+1. The experiment level, here we define the experiment unique name
 1. The experiment options:
    1. Settings, at this moment the Rollout Manager supports three options:
       1. is_sticky - receives a YES\NO option.
