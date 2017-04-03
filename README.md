@@ -1,7 +1,7 @@
 # Rollout Manager
-RolloutManager is a component intended to help you roll out your features inside your app by defining variants and allocating odds for each of them.
+RolloutManager is a component intended to help you roll out your features inside your app by defining variants and setting odds for each of them.
 
-The component includes many features like stickiness and default values for your convenience.
+The component includes many features like stickiness and default values management for your convenience.
 
 #### Support
 - Built for iOS 8
@@ -37,13 +37,13 @@ NSString* chosenVariant = [rolloutManagerInstance variantByExperimentId:@"experi
 #### Configuration Dictionary Structure
 The structure of the configuration dictionary that is consumed by the Rollout Manager consists of sub-dictionaries:
 
-1. The experiment level, here we define the experiment ids (experiment names)
-2. The experiment options:
-  1. Settings, at this moment the Rollout Manager supports three options:
-    * is_sticky - receives a YES\NO option.
-    * supported_countries - receives a string of country codes separated by a comma (https://en.wikipedia.org/wiki/ISO_3166-1)
-    * supported_languages - receives a string of languages separated by a comma  (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
-  2. Variants, a dictionary of the variants names and their weights.
+1. The experiment level, here we define the experiment unique name
+1. The experiment options:
+   1. Settings, at this moment the Rollout Manager supports three options:
+      1. is_sticky - receives a YES\NO option.
+      1. supported_countries - receives a string of country codes separated by a comma (https://en.wikipedia.org/wiki/ISO_3166-1)
+      1. supported_languages - receives a string of languages separated by a comma  (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+   1. Variants, a dictionary of the variants names and their weights.
 
 **How does the Rollout Manager calculate it weights?**
 
